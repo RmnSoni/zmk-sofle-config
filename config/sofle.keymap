@@ -107,9 +107,21 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &none  &none                       &none                  &none              &none              &none
 &none       &none         &none         &none         &none         &none                         &none  &kp RS(RA(P))               &kp RS(RA(N))          &none              &none              &none
 &none       &none         &none         &none         &none         &none                         &none  &kp RS(LA(J))               &kp RS(RA(K))          &kp LS(LA(LC(J)))  &kp LS(LC(LA(K)))  &none
-&none       &none         &none         &none         &none         &none         &none    &none  &none  &kp LS(LA(LC(LEFT_ARROW)))  &kp LS(LA(LC(RIGHT)))  &none              &none              &none
+&none       &none         &none         &none         &none         &none         &to 4    &to 0  &none  &kp LS(LA(LC(LEFT_ARROW)))  &kp LS(LA(LC(RIGHT)))  &none              &none              &none
                           &none         &none         &none         &none         &none    &none  &none  &none                       &none                  &none
             >;
+        };
+
+        windows {
+            bindings = <
+&kp GRAVE  &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                           &kp N6  &kp N7    &kp N8     &kp N9     &kp N0    &kp MINUS
+&kp TAB    &kp Q   &kp W     &kp E     &kp R      &kp T                            &kp Y   &kp U     &kp I      &kp O      &kp P     &kp EQUAL
+&kp ESC    &kp A   &kp S     &kp D     &kp F      &kp G                            &kp H   &kp J     &kp K      &kp L      &kp SEMI  &kp APOS
+&kp LSHFT  &kp Z   &kp X     &kp C     &kp V      &kp B   &kp K_MUTE    &none      &kp N   &kp M     &kp COMMA  &kp DOT    &kp FSLH  &kp RSHFT
+                   &kp LGUI  &kp LALT  &kp LCTRL  &mo 1   &kp ENTER     &kp SPACE  &mo 2   &kp BSPC  &kp RALT   &kp RCTRL
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN>;
         };
     };
 };
